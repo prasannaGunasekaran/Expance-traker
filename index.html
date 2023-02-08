@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense tracker</title>
+    <!--custom css-->
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!--normalize css-->
+    <link rel="stylesheet" href="./styles/normalize.css">
+
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+</head>
+<body>
+    <div class="main">
+        <h1>Expense Tracker <i class="fa-solid fa-coins"></i></h1>
+      <!--balance-->
+      <div class="bank">
+        <div class="balance-container">
+            <p class="balance">YOUR BALANCE:</p>
+            <P class="balance-amt" id="balance">$0.00</P>
+        </div>
+
+      <!--output-->
+      <div class="output-container">
+
+        <div class="income-container">
+            <p class="income">INCOME:</p>
+            <P class="income-amt" id="income">$0.00</P>
+        </div>
+
+        <div class="expense-container">
+            <p class="expense">EXPENSE:</p>
+            <P class="expense-amt" id="expense">$0.00</P>
+        </div>
+      </div> 
+    </div>
+    <!--history-->
+      <div class="history-container">
+        <h2 class="history-title">History</h2>
+        <div class="history-title">
+          <ul class="lists" id="lists">
+            <li class="minus">
+              <span>Cash</span><span>-500</span>
+              <button class="delete-btn btn">X</button>
+            </li>
+
+            <li class="plus">
+              <span>Cash</span><span>1000</span>
+              <button class="delete-btn btn">X</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--form input container-->
+      <h2 class="heading" >Add New Transaction</h2>
+      <form class="input-container" id="form">
+        <label for="transaction">Transaction</label>
+        <input type="text" id="transaction" class="transaction" placeholder="enter transaction">
+        
+
+        <label for="input-amount">Amount (Negative-Expense, Positive-Income)</label>
+        <input type="text" id="input-amount" class="input-amount" placeholder="enter amount">
+
+        <button class="button" id="btn">Add Transaction</button>
+
+      </form>
+      <button class="rest">restart</button>
+    </main>
+     
+    <script src="./scripts/script.js"></script>
+</body>
+</html>
